@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.msbomrel.studentinformationsystem">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:configChanges="orientation|screenSize">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RegisterUser"
+            android:label="Register User"
+            android:theme="@style/AppThemeDark"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".UsersProfile"
+            android:label="User Details"
+            android:theme="@style/AppThemeDark"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".AddStudent"
+            android:label="User Details"
+            android:theme="@style/AppThemeDark"
+            android:parentActivityName=".UsersProfile">
+        </activity>
+    </application>
+
+</manifest>

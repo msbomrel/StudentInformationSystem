@@ -1,0 +1,17 @@
+<resources>
+    <item name="visible" type="id"/>
+    <item name="masked" type="id"/>
+    <string name="app_name">Student Information System</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="firststart">FirstTime</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="addstudent">Add Student</string>
+    <string name="aboutus">About Us</string>
+    <string name="contactus">Contact Us</string>
+    <string name="fullname">Full Name</string>
+    <string name="batch">Batch</string>
+    <string name="mobile">Mobile number</string>
+</resources>

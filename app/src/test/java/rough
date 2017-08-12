@@ -1,0 +1,78 @@
+public class ListViewAdapter extends RecyclerView.Adapter<>{
+    private List<Student> mList;
+    private Context context;
+
+    public ListViewAdapter(Context context, List<Student> mList)
+    {
+        this.context = context;
+        this.mList = mList;
+    }
+
+
+    class HolderData extends RecyclerView.ViewHolder{
+
+    }
+}
+
+
+public class ListViewAdapter extends BaseAdapter{
+    private final Context context;
+    private final ArrayList<String> id;
+    private final ArrayList<String > name;
+    private final ArrayList<String> batch;
+    private final ArrayList<String> email;
+    private final ArrayList<S> mobile;
+    LayoutInflater layoutInflater;
+
+    public ListViewAdapter(Context ctx, ArrayList id, ArrayList name, ArrayList batch, ArrayList email, ArrayList mobile) {
+        this.context = ctx;
+        this.id = id;
+        this.name = name;
+        this.batch = batch;
+        this.email = email;
+        this.mobile = mobile;
+
+    }
+
+    @Override
+    public int getCount() {
+        return id.size();
+    }
+
+    @Override
+    public Object getItem(int position) {
+        return position;
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
+    @SuppressLint("ViewHolder")
+    @Override
+    public View getView(final int position, View view, ViewGroup parent) {
+
+        Holder holder = new Holder();
+        layoutInflater = (LayoutInflater) context.getSystemService
+                (Context.LAYOUT_INFLATER_SERVICE);
+
+        view = layoutInflater.inflate(R.layout.activity_onestudent, null);
+        holder.txt_name=(TextView) view.findViewById(R.id.name);
+        holder.txt_batch=(TextView) view.findViewById(R.id.batch);
+        holder.txt_mobile=(TextView) view.findViewById(R.id.email);
+        holder.txt_mail=(TextView) view.findViewById(R.id.mobile);
+
+        holder.txt_name.setText(name.get(position));
+        holder.txt_batch.setText(batch.get(position));
+        holder.txt_mail.setText(email.get(position));
+        holder.txt_mobile.setText(mobile.get(position));
+
+        return view;
+    }
+
+    static class Holder {
+        TextView txt_name,txt_batch,txt_mobile,txt_mail;
+    }
+}
+
