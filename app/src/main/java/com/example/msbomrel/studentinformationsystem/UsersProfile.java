@@ -76,12 +76,12 @@ public class UsersProfile extends AppCompatActivity {
 
 
 
-
         //floating button
         FloatingActionButton btn = (FloatingActionButton) findViewById(R.id.fab);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent intent = new Intent(UsersProfile.this, AddStudent.class);
                 startActivity(intent);
             }

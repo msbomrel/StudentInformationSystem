@@ -2,13 +2,10 @@ package com.example.msbomrel.studentinformationsystem.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.msbomrel.studentinformationsystem.AddStudent;
@@ -57,7 +54,6 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData> {
 
     class HolderData extends RecyclerView.ViewHolder{
         TextView txt_name,txt_batch,txt_mobile,txt_mail;
-        ImageButton dial;
         Student student;
 
         public HolderData(View v){
@@ -66,7 +62,6 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData> {
             txt_batch=(TextView) v.findViewById(R.id.batch);
             txt_mail=(TextView) v.findViewById(R.id.mobile);
             txt_mobile=(TextView) v.findViewById(R.id.email);
-//            dial = (ImageButton) v.findViewById(R.id.dialmobile) ;
 
             v.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -82,18 +77,6 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData> {
                 }
             });
 
-//            dial.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    Intent call = new Intent(Intent.ACTION_DIAL, Uri.parse(student.getMobile()));
-//                    initActivity(call);
-//                }
-//            });
-
         }
-//        private void initActivity(Intent intent) {
-//            context.startActivity(intent);
-//        }
-
     }
 }
