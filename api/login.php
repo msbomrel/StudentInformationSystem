@@ -1,5 +1,5 @@
 <?php
-require_once('dbConnect.php');
+require_once('connect.php');
 
 $username = $_POST['username'];
 $password = $_POST['password'];
@@ -15,6 +15,5 @@ $check = mysqli_fetch_array($res);
 	}else{
 	echo 'failure';
 	}
- 
 mysqli_close($con);
 ?>
